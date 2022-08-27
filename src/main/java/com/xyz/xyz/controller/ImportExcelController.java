@@ -38,11 +38,11 @@ public class ImportExcelController {
 
                 client.setId(id);
                 client.setTypeIdentification(row.getCell(1).getStringCellValue());
-                client.setIdentification(row.getCell(2).getStringCellValue());
+                client.setIdentification(Double.toString(row.getCell(2).getNumericCellValue()));
                 client.setName(row.getCell(3).getStringCellValue());
-                client.setCity(row.getCell(3).getStringCellValue());
-                client.setAddress(row.getCell(3).getStringCellValue());
-                client.setPhone(row.getCell(3).getStringCellValue());
+                client.setCity(row.getCell(4).getStringCellValue());
+                client.setAddress(row.getCell(5).getStringCellValue());
+                client.setPhone(Double.toString(row.getCell(6).getNumericCellValue()));
                 clientList.add(client);
             }
         }
